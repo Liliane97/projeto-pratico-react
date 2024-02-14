@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Projeto pratico do curso da udemy de React para aplicar os conceitos estudados durante o curso
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## O que foi utilizado
 
-## Available Scripts
+- [API the movie db](https://developer.themoviedb.org/docs/getting-started)
+- Axios
+- react-router-dom
+- moment
+- react-toastify
 
-In the project directory, you can run:
+## Implementações adicionais
 
-### `npm start`
+Foi criado um botão dropdown chamado Categorias para que o usuário pudesse encontrar filmes de acordo com a categoria escolhida e uma página que exibi os filmes relacionados a categoria escolhida pelo usuário. Nessa página ele exibe em forma de cards com a imagem, titulo, data de lançamento e um botão ver detalhes. Ao clicar nesse botão ele será direcionado para a página de detalhes do filme, que foi criado juntamente com o professor, nessa página é exibido o titulo, a imagem,a sinopse,avaliação e dois botões um para salvar na lista e outro para abrir o trailer no youtube.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Implemtações futuras
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Adicionar campo de busca
 
-### `npm test`
+> Páginação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Modal para perguntar ao usuário se deseja realmente exclui o filme da sua lista
 
-### `npm run build`
+![image](https://github.com/Liliane97/projeto-pratico-react/assets/62839968/222a0a9e-c545-4226-bb95-64d6984ddf15)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/Liliane97/projeto-pratico-react/assets/62839968/98344794-861d-4158-9767-9bbdccf02df9)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://github.com/Liliane97/projeto-pratico-react/assets/62839968/8ffbd6d8-9cfa-4514-89d6-8307c333b400)
 
-### `npm run eject`
+![image](https://github.com/Liliane97/projeto-pratico-react/assets/62839968/45638f02-0e2a-4328-adcb-c289425669a5)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
