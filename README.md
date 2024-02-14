@@ -12,7 +12,7 @@
 
 Foi criado um botão dropdown chamado Categorias para que o usuário pudesse encontrar filmes de acordo com a categoria escolhida e uma página que exibi os filmes relacionados a categoria escolhida pelo usuário. Nessa página ele exibe em forma de cards com a imagem, titulo, data de lançamento e um botão ver detalhes. Ao clicar nesse botão ele será direcionado para a página de detalhes do filme, que foi criado juntamente com o professor, nessa página é exibido o titulo, a imagem,a sinopse,avaliação e dois botões um para salvar na lista e outro para abrir o trailer no youtube.
 
-## Implemtações futuras
+## Implementações futuras
 
 > Adicionar campo de busca
 
