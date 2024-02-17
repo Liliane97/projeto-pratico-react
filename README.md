@@ -7,6 +7,7 @@
 - react-router-dom
 - moment
 - react-toastify
+- @mui/material
 
 ## Implementações adicionais
 
@@ -18,7 +19,8 @@ Foi criado um botão dropdown chamado Categorias para que o usuário pudesse enc
 
 > Páginação
 
-> Modal para perguntar ao usuário se deseja realmente excluir o filme da sua lista
+> Modal para perguntar ao usuário se deseja realmente excluir o filme da sua lista( adicionado)
+
 
 ![image](https://github.com/Liliane97/projeto-pratico-react/assets/62839968/222a0a9e-c545-4226-bb95-64d6984ddf15)
 
