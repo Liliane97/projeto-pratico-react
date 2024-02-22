@@ -19,7 +19,6 @@ export default function Home(){
             }
           })
           .then((response)=>{
-            console.log("xx",response.data);
             setFilme(response.data)
             setLoading(false)
           
@@ -41,7 +40,6 @@ export default function Home(){
         let filmesSalvos = JSON.parse(minhaLista) || [];
 
         const hasFilme = filmesSalvos.some((filmeSalvo)=>filmeSalvo.id === filme.id)
-        console.log(hasFilme);
         if(hasFilme){
             toast.warn("Esse filme já se encontra na sua lista!!!")
             return
@@ -60,17 +58,27 @@ export default function Home(){
     }
     return (
        <div className="filme-info">
-        
         <h1>{filme.title} </h1>
-        <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
-        <h3>Sinopse</h3>
+
+        {
+            filme.backdrop_path ?
+            <>
+              <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
+              <h3>Sinopse</h3>
+            
+            </>
+              :
+              <div>
+                <p>Algumas informações não foram disponibilizadas ou encontradas:(</p>  
+                <p>Mas você pode ver o trailer!</p>  
+             </div>
+        }
         <span>{filme.overview}</span>
         <strong>Avaliação: {filme.vote_average} / 10</strong>
-      
         <div className="area-buttons">
-            <button onClick={salvarFime}>Salvar</button>
+            <button  onClick={salvarFime}>Salvar</button>
             <button>
-                <a href={`http://youtube.com/results?search_query=${filme.title} Trailer`} target="blank" rel="external noreferrer" >Trailer</a>
+                <a className="trailer" href={`http://youtube.com/results?search_query=${filme.title} Trailer`} target="blank" rel="external noreferrer" >Trailer</a>
             </button>
         </div>
        

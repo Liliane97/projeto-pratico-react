@@ -40,10 +40,11 @@
     background-color: darkblue;
     color: #fff;
 }
-.area-buttons button a{
+.area-buttons .trailer {
     text-decoration: none;
     color: #000;
     transition: all 0.5s;
+    background-color: transparent;
 
 }
 .area-buttons a:hover{

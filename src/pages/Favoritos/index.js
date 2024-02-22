@@ -8,10 +8,12 @@ import { Button, Dialog, DialogActions, DialogTitle } from "@mui/material"
 export default function Favoritos(){
     const [filmes,setFilmes] = useState([])
     const [open, setOpen] = useState(false);
+    const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
         const minhaLista = localStorage.getItem("@primeFlix")
         setFilmes(JSON.parse(minhaLista) || [])
+        setLoading(false)
 
     },[])
 
@@ -33,6 +35,13 @@ export default function Favoritos(){
   const handleClose = () => {
     setOpen(false);
   };
+  if(loading){
+    return(
+        <div className="loading">
+            <h2>Carregando lista de filmes...</h2>
+        </div>
+    )
+}
     return(
         <div className="meus-filmes">
             <h1>Meus filmes</h1>

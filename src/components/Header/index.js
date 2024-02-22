@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import "./style.css"
-import { Link } from "react-router-dom"
+
 import api from "../../services/api"
+import Pesquisa from "../Busca"
 
 export default function Header(){
     const [categorias, setCategoria] = useState([])
@@ -21,7 +22,8 @@ export default function Header(){
     },[])
     return (
         <header>
-           <Link className="logo" to="/">Prime Fix</Link>
+           <a className="logo" href="/">Prime Fix</a>
+           <Pesquisa/>
             <div className="menu">
                 <button className="categoria">
                     Categorias
@@ -29,14 +31,15 @@ export default function Header(){
                         {categorias.map((c)=>{
                             return(
                                 <li key={c.id}>
-                                    <Link to={`/filme/categoria/${c.id}-${c.name}`}>{c.name}</Link>
+                                    <a href={`/filme/categoria/${c.id}-${c.name}`}>{c.name}</a>
                                 </li>
                             )
                         })}   
                     </ul>
                 </button>
-                <Link className="favoritos" to="/favoritos">Meus filmes</Link>
+                <a className="favoritos" href="/favoritos">Meus filmes</a>
             </div>
+       
         </header>
     )
 }

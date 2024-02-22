@@ -5,7 +5,7 @@ import api from "../../../services/api"
 import "./categoria.css"
 export default function Categoria(){
     const {id,name} = useParams()
-    
+    const [loading,setLoading] = useState(true)
     const [lista,setLista] = useState([])
 
     useEffect(()=>{
@@ -18,7 +18,7 @@ export default function Categoria(){
               })
               .then((response)=>{
                 setLista(response.data.results)
-              
+                setLoading(false)
               })
               .catch(()=>{
                
@@ -30,7 +30,13 @@ export default function Categoria(){
     },[id])
     
     let nomeCategoria = id.split("-")
-    
+    if(loading){
+      return(
+          <div className="loading">
+              <h2>Carregando filme da categoria {nomeCategoria[1]}...</h2>
+          </div>
+      )
+  }
     
     return(
       <div className="container">
