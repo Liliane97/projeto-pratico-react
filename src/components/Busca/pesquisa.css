@@ -1,0 +1,23 @@
+.container-search{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   position: relative;
+   color: #fff; margin: 20px;
+}
+
+.pesquisa ,Icon{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #92928f;
+    left: 10px;
+}
+input{
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 16px;
+    width: 400px;
+}
