@@ -6,6 +6,8 @@
 
 body{
   font-family: sans-serif;
+  background-color: rgba(15, 15, 15, 0.89);
+  color: #fff;
 }
 .app{
   display: flex;
@@ -13,4 +15,5 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }

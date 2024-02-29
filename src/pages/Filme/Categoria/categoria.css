@@ -1,9 +1,12 @@
 
-.container{
+.container-categoria {
     width: 900px;
     margin: auto;
+    position: relative;
+    padding-bottom: 50px;
 }
-.container h1{
+
+.container-categoria  h1{
     padding: 25px 0px; 
 }
 .card-filmes{

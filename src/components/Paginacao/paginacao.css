@@ -1,0 +1,17 @@
+.pagination{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+ 
+.arrow-right ,.arrow-left:hover{
+    cursor: pointer;
+}
+
+.pagination  span{
+    padding:0px 10px;
+}
