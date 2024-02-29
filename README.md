@@ -17,7 +17,7 @@ Foi criado um botão dropdown chamado Categorias para que o usuário pudesse enc
 
 > Adicionar campo de busca (**adicionado**) 
 
-> Páginação
+> Páginação (**adicionado**) 
 
 > Modal para perguntar ao usuário se deseja realmente excluir o filme da sua lista (**adicionado**)
 
