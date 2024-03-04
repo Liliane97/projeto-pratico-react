@@ -25,7 +25,6 @@ export default function Home(){
           })
           .catch(()=>{
             navigation("/",{replace:true})
-            console.log("Filme não encontrado");
             return
           })
         }
@@ -58,31 +57,28 @@ export default function Home(){
     }
     return (
        <div className="filme-info">
-        <h1>{filme.title} </h1>
-
-        {
-            filme.backdrop_path ?
-            <>
-              <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
-              <h3>Sinopse</h3>
-            
-            </>
-              :
-              <div>
-                <p>Algumas informações não foram disponibilizadas ou encontradas:(</p>  
-                <p>Mas você pode ver o trailer!</p>  
-             </div>
-        }
-        <span>{filme.overview}</span>
-        <strong>Avaliação: {filme.vote_average} / 10</strong>
-        <div className="area-buttons">
-            <button  onClick={salvarFime}>Salvar</button>
-            <button>
-                <a className="trailer" href={`http://youtube.com/results?search_query=${filme.title} Trailer`} target="blank" rel="external noreferrer" >Trailer</a>
-            </button>
-        </div>
-       
-
+          <h1>{filme.title} </h1>
+          {
+              filme.backdrop_path ?
+              <>
+                <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
+                <h3>Sinopse</h3>
+              
+              </>
+                :
+                <div>
+                  <p>Algumas informações não foram disponibilizadas ou encontradas:(</p>  
+                  <p>Mas você pode ver o trailer!</p>  
+              </div>
+          }
+          <span>{filme.overview}</span>
+          <strong>Avaliação: {filme.vote_average} / 10</strong>
+          <div className="area-buttons">
+              <button  onClick={salvarFime}>Salvar</button>
+              <a className="trailer" href={`http://youtube.com/results?search_query=${filme.title} Trailer`} target="blank" rel="external noreferrer" >
+                <button> Trailer</button>
+              </a>
+          </div>
        </div>
     )
 }

@@ -55,8 +55,10 @@
     transition: all 0.3s;
 }
 .lista-filmes a:hover{
-    background-color: #0542e9;
+    background-color: #fff;
     font-weight: bolder;
+    color: #116feb;
+
 }
 
 .loading{

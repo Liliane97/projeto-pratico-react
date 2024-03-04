@@ -3,12 +3,14 @@ import { useEffect, useState } from "react"
 import "./favorito.css"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
-import { Button, Dialog, DialogActions, DialogTitle } from "@mui/material"
+import { Button, Dialog, DialogActions, DialogTitle ,DialogContent,DialogContentText} from "@mui/material"
 
 export default function Favoritos(){
     const [filmes,setFilmes] = useState([])
     const [open, setOpen] = useState(false);
     const [loading,setLoading] = useState(true)
+    const [deletar,setDeletar] = useState()
+    const [nomeFilmeDeletado,setNomeFilmeDeletado] = useState("")
 
     useEffect(()=>{
         const minhaLista = localStorage.getItem("@primeFlix")
@@ -16,7 +18,6 @@ export default function Favoritos(){
         setLoading(false)
 
     },[])
-
     function excluirFilme(id){
         let filtroFilmes = filmes.filter((item)=>{
             return (item.id !== id)
@@ -25,13 +26,14 @@ export default function Favoritos(){
         setFilmes(filtroFilmes)
         localStorage.setItem("@primeFlix",JSON.stringify(filtroFilmes))
         toast.success("Filme removido com  sucesso!!!")
-        setOpen(false)
+        setOpen(false);
     }
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (id,title) => {
     setOpen(true);
+    setDeletar(id)
+    setNomeFilmeDeletado(title)
   };
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -53,24 +55,30 @@ export default function Favoritos(){
                             <span>{filme.title}</span>
                             <div>
                                 <Link to={`/filme/${filme.id}`}>Ver detalhes</Link>
-                                <button  onClick={handleClickOpen}>Excluir</button>
+                                <button  onClick={()=>handleClickOpen(filme.id,filme.title)}>Excluir
+                                </button>
                             </div>
-                            <Dialog 
-                                open={open}
-                                onClose={handleClose}
-                                aria-labelledby="alert-dialog-title"
-                                aria-describedby="alert-dialog-description">
-                                <DialogTitle>
-                                    {"Tem certeza que deseja excluir o filme da sua lista?"}
-                                </DialogTitle>
-                                <DialogActions>
-                                    <Button  onClick={handleClose}>Não</Button>
-                                    <Button onClick={()=>excluirFilme(filme.id)}>Sim</Button>
-                                </DialogActions>
-                            </Dialog>
                         </li>
                     )
                 })}
+               <Dialog 
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description">
+                    <DialogTitle className="titulo-modal" id="alert-dialog-title">
+                       <span> {"Tem certeza que deseja excluir o filme da sua lista?"}</span>
+                    </DialogTitle>
+                    <DialogContent>
+                        <DialogContentText className="titulo-filme-modal">
+                            <span>{nomeFilmeDeletado}</span>
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions className="area-button-acao">
+                        <Button  onClick={()=>setOpen(false)}>Não</Button>
+                        <Button   onClick={()=>excluirFilme(deletar)}>Sim</Button>
+                    </DialogActions>
+                </Dialog>
             </ul>
         </div>
     )

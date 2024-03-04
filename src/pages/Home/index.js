@@ -62,7 +62,7 @@ export default function Home(){
             {filmes.map((filme,i)=>{
                 return (
                      <article key={filme.id}>
-                        <strong>{i+1}-{filme.title}</strong>
+                        <strong>{filme.title}</strong>
                         <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
                         <a href={`/filme/${filme.id}`}>Acessar</a>
                     </article>

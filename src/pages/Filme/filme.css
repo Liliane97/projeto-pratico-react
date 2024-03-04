@@ -24,6 +24,9 @@
     margin: 8px 0px;
 
 }
+.area-buttons{
+    padding-bottom: 20px ;
+}
 .area-buttons button{
     margin-right: 12px;
     margin-top: 14px;
@@ -37,7 +40,7 @@
     transition: all 0.5s;
 }
 .area-buttons button:hover{
-    background-color: darkblue;
+    background-color: #116feb;
     color: #fff;
 }
 .area-buttons .trailer {
@@ -47,6 +50,6 @@
     background-color: transparent;
 
 }
-.area-buttons a:hover{
+.area-buttons  a:hover{
     color: #fff;
 }

@@ -63,3 +63,31 @@
   width:600px;
   height: 100px;
 }
+.titulo-modal span {
+    font-size: 22px;
+    color: #0f0f0f;
+}
+.titulo-filme-modal span{
+    padding: 14px 0px;
+    font-size:20px;
+    font-weight: 800;
+    margin-left: 5px;
+}
+.area-button-acao{
+    margin-bottom: 12px;
+     margin-right: 12px;
+
+}
+.area-button-acao Button{
+    transition: all 0.5;
+    color: #000;
+    background-color: #dddddd;
+}
+
+.area-button-acao Button:hover{
+    background-color: #116feb;
+    color: #fff;
+    font-weight: 700;
+
+  
+}
